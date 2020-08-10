@@ -1,5 +1,6 @@
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 #include "KalmanFilter.h"
 #include "Tracker.h"
 using namespace std;
@@ -9,8 +10,8 @@ bool mouseDown = false;
 
 void CallBackFunc(int event, int x, int y, int flags, void* userdata)
 {
-     if ( event == CV_EVENT_LBUTTONDOWN )  { mouseDown = true; }
-     if ( event == CV_EVENT_LBUTTONUP ) { mouseDown = false; }
+     if ( event == EVENT_LBUTTONDOWN )  { mouseDown = true; }
+     if ( event == EVENT_LBUTTONUP ) { mouseDown = false; }
 
      if ( event == EVENT_MOUSEMOVE && mouseDown )
      {
@@ -38,7 +39,7 @@ int main()
     typedef GNNTracker::MeasurementSpaceVector Measurement;
     typedef GNNTracker::Measurements Measurements;
 
-    namedWindow( "Kalman Demo", CV_WINDOW_AUTOSIZE );
+    namedWindow( "Kalman Demo", WINDOW_AUTOSIZE );
 
     int * mouse = new int[2]();
     mouse[0] = mouse[1] = -1;

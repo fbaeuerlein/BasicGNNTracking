@@ -8,7 +8,7 @@
 #ifndef AUCTIONALGORITHM_H_
 #define AUCTIONALGORITHM_H_
 
-#include <eigen3/Eigen/Core>
+#include <eigen/Eigen/Core>
 
 #define __AUCTION_EPSILON_MULTIPLIER 1e-5
 #define __AUCTION_INF 1e8

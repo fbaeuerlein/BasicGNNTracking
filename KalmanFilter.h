@@ -3,7 +3,7 @@
 
 #include "helper.h"
 
-#include <eigen3/Eigen/Dense>
+#include <eigen/Eigen/Dense>
 
 template<size_t StateDim, size_t MeasurementDim>
 class KalmanFilter

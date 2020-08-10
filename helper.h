@@ -1,7 +1,7 @@
 #ifndef HELPER_H
 #define HELPER_H
 
-#include <eigen3/Eigen/Core>
+#include <eigen/Eigen/Core>
 
 template<size_t Dimension>
 const double normalDistributionDensity(const Eigen::Matrix<double, Dimension, Dimension> & cov,

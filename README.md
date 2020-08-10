@@ -13,3 +13,22 @@ assignments (i.e. minimizing the mahalanobis-distance) with the auction algorith
 Change parameters for covariances and probabilities in Tracker.h to fit your needs ...
 
 Further information on GNN-trackers could be found at http://ecet.ecs.uni-ruse.bg/cst/docs/proceedings/S3/III-7.pdf
+
+
+Building and running with Docker
+================================
+
+Create docker image for building: 
+
+```
+docker build -t gnntracking:latest .
+```
+
+Run docker interactively and map current path into container (additionally export display):
+
+```
+docker run -v $(pwd):$(pwd) --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:rw  -it gnntracking:latest /bin/bash 
+```
+
+To run the resulting binary, call `xhost +` on the host to display the window.
